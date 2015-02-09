@@ -49,93 +49,31 @@ which carries forward this exception.
 
 class CreatureEncumbrance {
 public:
-	static const uint8 HEALTH = 0;
-	static const uint8 ACTION = 1;
-	static const uint8 MIND = 2;
+	static const uint8 HEALTH;
+	static const uint8 ACTION;
+	static const uint8 MIND;
 };
 
 class CreatureAttribute {
 public:
-	static const uint8 HEALTH = 0;
-	static const uint8 STRENGTH = 1;
-	static const uint8 CONSTITUTION = 2;
-	static const uint8 ACTION = 3;
-	static const uint8 QUICKNESS = 4;
-	static const uint8 STAMINA = 5;
-	static const uint8 MIND = 6;
-	static const uint8 FOCUS = 7;
-	static const uint8 WILLPOWER = 8;
-	static const uint8 UNKNOWN = 9;
+	static const uint8 HEALTH;
+	static const uint8 STRENGTH;
+	static const uint8 CONSTITUTION;
+	static const uint8 ACTION;
+	static const uint8 QUICKNESS;
+	static const uint8 STAMINA;
+	static const uint8 MIND;
+	static const uint8 FOCUS;
+	static const uint8 WILLPOWER;
+	static const uint8 UNKNOWN;
 
-	static const uint8 ARRAYSIZE = 9;
+	static const uint8 ARRAYSIZE;
 
-	static bool isHAM(uint8 attribute) {
-		return (attribute == HEALTH || attribute == ACTION || attribute == MIND);
-	}
+	static bool isHAM(uint8 attribute);
 
-	static uint8 getAttribute(String attribute) {
-		attribute = attribute.toLowerCase();
+	static uint8 getAttribute(String attribute);
 
-		if (attribute == "action")
-			return ACTION;
-		else if (attribute == "mind")
-			return MIND;
-		else if (attribute == "strength")
-			return STRENGTH;
-		else if (attribute == "constitution")
-			return CONSTITUTION;
-		else if (attribute == "quickness")
-			return QUICKNESS;
-		else if (attribute == "stamina")
-			return STAMINA;
-		else if (attribute == "focus")
-			return FOCUS;
-		else if (attribute == "willpower")
-			return WILLPOWER;
-		else
-			return HEALTH;
-
-	}
-
-	static String getName(const uint8 attribute, bool initialCap = false) {
-		String name = "";
-
-		switch (attribute) {
-		case ACTION:
-			name = "action";
-			break;
-		case MIND:
-			name = "mind";
-			break;
-		case STRENGTH:
-			name = "strength";
-			break;
-		case CONSTITUTION:
-			name = "constitution";
-			break;
-		case QUICKNESS:
-			name = "quickness";
-			break;
-		case STAMINA:
-			name = "stamina";
-			break;
-		case FOCUS:
-			name = "focus";
-			break;
-		case WILLPOWER:
-			name = "willpower";
-			break;
-		default:
-		case HEALTH:
-			name = "health";
-			break;
-		}
-
-		if (initialCap)
-			name[0] = toupper(name[0]);
-
-		return name;
-	}
+	static String getName(const uint8 attribute, bool initialCap = false);
 };
 
 

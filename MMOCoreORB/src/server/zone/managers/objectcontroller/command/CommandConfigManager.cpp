@@ -65,6 +65,7 @@ which carries forward this exception.
 #include "server/zone/objects/creature/commands/pet/PetHarvestCommand.h"
 
 #include "server/zone/objects/creature/CreatureState.h"
+#include "server/zone/objects/creature/CreatureAttribute.h"
 #include "server/zone/objects/creature/CreaturePosture.h"
 #include "server/zone/objects/creature/CreatureLocomotion.h"
 #include "server/zone/templates/datatables/DataTableIff.h"
